@@ -305,8 +305,8 @@ terraform {
 
 after terraform apply, check the azure account to see the cluster.
 
-to get credentials from new cluster use command below:
-- az aks get-credentials --resource-group $(terraform output -raw resource_group_name) --name $(terraform output -raw kubernetes_cluster_name)
+**to get credentials from new cluster use command below:**
+ - az aks get-credentials --resource-group (dolar_sign)(terraform output -raw resource_group_name) --name $(terraform output -raw kubernetes_cluster_name)
 ### download kube config to your laptop
 - open a new tab in cmder and download k8-config document in your windows virtual machine with the command below
     - scp ubuntu@[ubuntu IP]:.kube/config k8-config
